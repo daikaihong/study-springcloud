@@ -3,6 +3,7 @@ package com.atguigu.springcloud.controller;
 import com.atguigu.springcloud.entity.Payment;
 import com.atguigu.springcloud.sys.Result;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,6 +28,18 @@ public class OrderController {
     @GetMapping("/consumer/payment/{id}")
     public Result<Payment> getPayment(@PathVariable("id") Long id){
         return restTemplate.getForObject(PAYMENT_URL+"/payment/" + id, Result.class);
+    }
+
+    @GetMapping("/comsumer/payment/getForEntity/{id}")
+    public Result getPaymentBody(@PathVariable("id") Long id) {
+
+        ResponseEntity<Result> entity = restTemplate.getForEntity(PAYMENT_URL + "/payment/" + id, Result.class);
+
+        if(entity.getStatusCode().is2xxSuccessful()) {
+            return entity.getBody();
+        }
+
+       return new Result().error("操作失败!");
     }
 
 }

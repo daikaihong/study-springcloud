@@ -15,6 +15,8 @@
       <module>cloud-eureka-serve7002</module>
       <module>cloud-provider-payment8002</module>
       <module>cloud-provider-consul-payment8005</module>
+      <module>cloud-consumer-feign-order80</module>
+      <module>cloud-consumer-feign-order80</module>
   </modules>
   <packaging>pom</packaging>
 

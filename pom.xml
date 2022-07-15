@@ -22,8 +22,11 @@
       <module>cloud-consumer-hystrix-dashboard9001</module>
       <module>cloud-gateway-gateway9527</module>
       <module>cloud-config-center-3344</module>
-    <module>cloud-config-client-3355</module>
+      <module>cloud-config-client-3355</module>
       <module>cloud-config-client-3366</module>
+      <module>cloud-alibaba-provider-payment-9001</module>
+      <module>cloud-alibaba-consumer-nacos-order83</module>
+    <module>cloud-alibab-config-nacos-client-3377</module>
   </modules>
   <packaging>pom</packaging>
 

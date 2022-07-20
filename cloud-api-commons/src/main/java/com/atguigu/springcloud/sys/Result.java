@@ -1,10 +1,12 @@
 package com.atguigu.springcloud.sys;
 
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 
 @Data
+@Accessors(chain = true)
 public class Result<T> implements Serializable {
 
     private Integer code;
